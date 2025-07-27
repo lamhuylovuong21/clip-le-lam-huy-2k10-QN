@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Jul 27 21:38:05 2025
+
+@author: ASUS
+"""
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    margin-top: 40px;
+}
+video, img {
+    margin: 10px;
+}

@@ -1,0 +1,33 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Jul 27 21:35:49 2025
+
+@author: ASUS
+"""
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Clip của Lê Lâm Huy 2k10</title>
+</head>
+<body>
+    <h1>Danh sách ảnh & video</h1>
+    <ul>
+        {% for file in files %}
+            <li>
+                {% if file.endswith('.jpg') or file.endswith('.png') %}
+                    <img src="{{ url_for('static', filename='uploads/' + file) }}" width="300">
+                {% elif file.endswith('.mp4') %}
+                    <video width="300" controls>
+                        <source src="{{ url_for('static', filename='uploads/' + file) }}" type="video/mp4">
+                        Trình duyệt không hỗ trợ video.
+                    </video>
+                {% else %}
+                    <a href="{{ url_for('static', filename='uploads/' + file) }}">{{ file }}</a>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
