@@ -1,8 +1,2 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Jul 27 21:33:07 2025
-
-@author: ASUS
-"""
-
-flask
+Flask
+Werkzeug
