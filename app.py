@@ -8,11 +8,11 @@ UPLOAD_FOLDER = 'static/uploads'
 
 @app.route("/")
 def home():
-    # Tạo thư mục nếu chưa có
+    
     if not os.path.exists(UPLOAD_FOLDER):
         os.makedirs(UPLOAD_FOLDER)
 
-    # Lấy danh sách file trong thư mục
+  
     files = os.listdir(UPLOAD_FOLDER)
 
     return render_template("index.html", files=files)
