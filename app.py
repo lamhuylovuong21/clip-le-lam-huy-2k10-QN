@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Jul 27 21:31:43 2025
 
-@author: ASUS
-"""
 from flask import Flask, render_template
 import os
 
@@ -21,6 +16,7 @@ def home():
     files = os.listdir(UPLOAD_FOLDER)
 
     return render_template("index.html", files=files)
+app.run(debug=True, use_reloader=False)
 
 
 
