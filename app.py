@@ -18,7 +18,9 @@ def home():
     return render_template("index.html", files=files)
 app.run(debug=True, use_reloader=False)
 if __name__ == '__main__':
-    app = Flask(__name__)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(debug=False, use_reloader=False, host="0.0.0.0", port=port)
+    
 
 
 
