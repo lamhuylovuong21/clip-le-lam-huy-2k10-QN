@@ -17,6 +17,8 @@ def home():
 
     return render_template("index.html", files=files)
 app.run(debug=True, use_reloader=False)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=10000)
 
 
 
